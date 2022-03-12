@@ -6,12 +6,13 @@ export default function Header() {
     <div>
       <ul>
         <li>
-          <NavLink to="/hello" activeClassName={classes.active}>
+           {/* we can find isActive property from navInfo */}
+          <NavLink to="/hello" className={(navInfo) => navInfo.isActive ? classes.active : ""}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/posts" activeClassName={classes.active}>
+          <NavLink to="/posts" className={(navInfo) => navInfo.isActive ? classes.active : ""}>
             Posts
           </NavLink>
         </li>
