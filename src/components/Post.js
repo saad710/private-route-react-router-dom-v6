@@ -4,9 +4,12 @@ export default function Post() {
   const navigate = useNavigate();
   
   const handleGoBack = () => {
-      navigate('/posts',{
-        replace:true,
-      })
+      // navigate('/posts',{
+      //   replace:true,
+      // })
+
+      //one-step-back
+      navigate(-1)
   }
 
   return (
