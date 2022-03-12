@@ -6,12 +6,12 @@ export default function Header() {
     <div>
       <ul>
         <li>
-          <NavLink to="/" activeClassName={classes.active}>
+          <NavLink to="/" className={classes.active}>
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/dashboard" activeClassName={classes.active}>
+          <NavLink to="/dashboard" className={classes.active}>
             Dashboard
           </NavLink>
         </li>
