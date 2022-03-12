@@ -1,20 +1,20 @@
-import { Navigate,  Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
 import Header from "./components/Header";
-import Hello from "./components/Hello";
-import Post from "./components/Post";
-import Posts from "./components/Posts";
+import Homepage from "./components/Homepage";
+import Login from "./components/Login";
+import PrivateOutlet from "./components/PrivateOutlet";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route path="/" exact element={<Navigate to='/hello' />}/>
-        <Route path="/hello/*" element={<Hello />} >
-            <Route path="world" element={<p>this is world</p>} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<PrivateOutlet />}>
+          <Route path="dashboard" element={<Dashboard title="Dashboard" />} />
         </Route>
-        <Route path="/posts" exact element={ <Posts />} />
-        <Route path="/posts/:postId" element={ <Post />} />
       </Routes>
     </div>
   );
